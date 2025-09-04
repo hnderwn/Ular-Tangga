@@ -5,8 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Snakes and Ladders</title>
-    <link href="index.css" rel="stylesheet" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka+One&display=swap" rel="stylesheet" />
@@ -30,20 +29,25 @@
       .animate-float-up {
         animation: float-up 2s ease-out forwards;
       }
-    </style>
-    <script type="importmap">
-      <!-- {
-        "imports": {
-          "react/": "https://aistudiocdn.com/react@^19.1.1/",
-          "react": "https://aistudiocdn.com/react@^19.1.1",
-          "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+      @keyframes pop-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.9);
         }
-      } -->
-    </script>
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-pop-in {
+        animation: pop-in 0.3s ease-out forwards;
+      }
+    </style>
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body class="bg-teal-50">
     <div id="root"></div>
+    <audio id="background-music" src="https://cdn.pixabay.com/audio/2022/08/17/audio_33758a0329.mp3" loop></audio>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

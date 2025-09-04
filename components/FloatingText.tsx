@@ -20,7 +20,7 @@ const FloatingText: React.FC<FloatingTextProps> = ({ text, position, type }) => 
 
   return (
     <div
-      className={`absolute text-2xl md:text-3xl font-brand font-bold pointer-events-none -translate-x-1/2 -translate-y-full ${typeStyles[type]} animate-float-up`}
+      className={`absolute text-xl md:text-2xl font-brand font-bold pointer-events-none -translate-x-1/2 -translate-y-full ${typeStyles[type]} animate-float-up`}
       style={{ ...style, textShadow: '1px 1px 3px rgba(255,255,255,0.7)' }}
     >
       {text}

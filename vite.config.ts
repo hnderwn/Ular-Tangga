@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [tailwindcss()],
     define: {
-      'process.env.API_URL': JSON.stringify(env.API_URL),
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
+      'process.env.URL_KEY': JSON.stringify(env.URL_KEY),
     },
     resolve: {
       alias: {
